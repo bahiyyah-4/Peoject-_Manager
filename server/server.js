@@ -10,10 +10,13 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookies())
 
-require("./server/config/project.config");
-require("./server/routes/project.routes")(app)
+require("./config/project.config");
+require("./routes/project.routes")(app)
 
 app.listen(port, () => console.log("server is on!"))
+
+
+
 
 
 
